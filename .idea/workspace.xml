@@ -4,6 +4,7 @@
     <list default="true" id="30583b19-5e13-4b4f-89b7-a8cd6f3baf05" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/App.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/App.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/clock/Clock.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/timer/Timer.tsx" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -13,6 +14,7 @@
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
+        <option value="TypeScript File" />
         <option value="TypeScript JSX File" />
       </list>
     </option>
@@ -47,6 +49,11 @@
     <property name="ts.external.directory.path" value="C:\Users\armau\OneDrive\Documentos\Projects\pomodorito\node_modules\typescript\lib" />
     <property name="vue.rearranger.settings.migration" value="true" />
   </component>
+  <component name="RecentsManager">
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\Users\armau\OneDrive\Documentos\Projects\pomodorito\src\clock" />
+    </key>
+  </component>
   <component name="RunManager">
     <configuration name="start" type="js.build_tools.npm" temporary="true" nameIsGenerated="true">
       <package-json value="$PROJECT_DIR$/package.json" />
@@ -74,7 +81,8 @@
       <updated>1612985035011</updated>
       <workItem from="1612985036708" duration="1238000" />
       <workItem from="1613085197353" duration="669000" />
-      <workItem from="1613086192485" duration="4094000" />
+      <workItem from="1613086192485" duration="4149000" />
+      <workItem from="1613156020765" duration="6450000" />
     </task>
     <task id="LOCAL-00001" summary="Update README">
       <created>1612987005135</created>
@@ -83,7 +91,14 @@
       <option name="project" value="LOCAL" />
       <updated>1612987005135</updated>
     </task>
-    <option name="localTasksCounter" value="2" />
+    <task id="LOCAL-00002" summary="Implement Clock component">
+      <created>1613094396707</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1613094396727</updated>
+    </task>
+    <option name="localTasksCounter" value="3" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -109,7 +124,8 @@
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="Update README" />
-    <option name="LAST_COMMIT_MESSAGE" value="Update README" />
+    <MESSAGE value="Implement Clock component" />
+    <option name="LAST_COMMIT_MESSAGE" value="Implement Clock component" />
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />
