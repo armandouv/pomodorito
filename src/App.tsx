@@ -1,10 +1,12 @@
 import * as React from "react"
-import {Box, ChakraProvider, Heading, theme} from "@chakra-ui/react"
+import {ChakraProvider, Heading, theme, VStack} from "@chakra-ui/react"
+import Clock from "./clock/Clock";
 
 export const App = () => (
     <ChakraProvider theme={theme}>
-        <Box textAlign="center" fontSize="xl">
-            <Heading as="h1">Pomodoro clock</Heading>
-        </Box>
+        <VStack spacing="2em">
+            <Heading>Pomodoro clock</Heading>
+            <Clock/>
+        </VStack>
     </ChakraProvider>
 )
