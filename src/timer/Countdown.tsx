@@ -11,21 +11,27 @@ const MINUTE_IN_MILLISECONDS = 1000 * 60;
 
 function Countdown(props: CountdownProps)
 {
-    const [startDate, setStartDate] = useState(new Date());
-    const [endDate, setEndDate] = useState(new Date(Date.now() + props.intervalInMinutes * MINUTE_IN_MILLISECONDS));
+    const [startDateMs, setStartDateMs] = useState(performance.now());
+    const [endDateMs, setEndDateMs] = useState(startDateMs + props.intervalInMinutes * MINUTE_IN_MILLISECONDS);
 
     useEffect(() => {
-        if (props.isActive)
-        {
-            const intervalId = window.setInterval(() => setStartDate(new Date()))
-            return () => {
-                window.clearInterval(intervalId)
-            };
-        }
-    });
+        const minutesInMs = props.intervalInMinutes * MINUTE_IN_MILLISECONDS;
+        const start = performance.now();
+        setStartDateMs(start);
+        setEndDateMs(start + minutesInMs);
+
+    }, [props.intervalInMinutes, props.isActive]);
+
+    useEffect(() => {
+        if (!props.isActive) return;
+        const handler = () => setStartDateMs(performance.now());
+        const intervalId = window.setInterval(handler, 50);
+        return () => window.clearInterval(intervalId);
+    }, [props.isActive]);
+
 
     return (
-        <Display date={new Date(endDate.getTime() - startDate.getTime())}/>
+        <Display date={new Date(endDateMs - startDateMs)}/>
     );
 }
 

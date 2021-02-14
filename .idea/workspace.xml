@@ -2,9 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="30583b19-5e13-4b4f-89b7-a8cd6f3baf05" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/src/timer/Countdown.tsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/timer/Display.tsx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/timer/Countdown.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/timer/Countdown.tsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/timer/Timer.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/timer/Timer.tsx" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -84,7 +83,8 @@
       <workItem from="1613085197353" duration="669000" />
       <workItem from="1613086192485" duration="4149000" />
       <workItem from="1613156020765" duration="6659000" />
-      <workItem from="1613255435436" duration="6644000" />
+      <workItem from="1613255435436" duration="6801000" />
+      <workItem from="1613327112633" duration="7397000" />
     </task>
     <task id="LOCAL-00001" summary="Update README">
       <created>1612987005135</created>
@@ -107,7 +107,14 @@
       <option name="project" value="LOCAL" />
       <updated>1613163519927</updated>
     </task>
-    <option name="localTasksCounter" value="4" />
+    <task id="LOCAL-00004" summary="Refactor into Countdown component">
+      <created>1613272147406</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1613272147406</updated>
+    </task>
+    <option name="localTasksCounter" value="5" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -135,7 +142,8 @@
     <MESSAGE value="Update README" />
     <MESSAGE value="Implement Clock component" />
     <MESSAGE value="Refactor into Timer" />
-    <option name="LAST_COMMIT_MESSAGE" value="Refactor into Timer" />
+    <MESSAGE value="Refactor into Countdown component" />
+    <option name="LAST_COMMIT_MESSAGE" value="Refactor into Countdown component" />
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />
