@@ -1,18 +1,16 @@
-import { Box } from "@chakra-ui/react";
 import React from "react";
+import {Box} from "@chakra-ui/react";
 import {convertToTwoDigitString} from "./TimerUtils";
 
-interface TimeSplit
-{
-    minutes: number,
-    seconds: number
-}
 
-function Display(props: TimeSplit)
+function Display(props: { date: Date })
 {
+    const minutes = convertToTwoDigitString(props.date.getMinutes());
+    const seconds = convertToTwoDigitString(props.date.getSeconds());
+
     return (
         <Box>
-            {`${convertToTwoDigitString(props.minutes)}:${convertToTwoDigitString(props.seconds)}`}
+            {`${minutes}:${seconds}`}
         </Box>
     );
 }

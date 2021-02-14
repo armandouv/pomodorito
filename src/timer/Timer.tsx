@@ -1,20 +1,34 @@
 import {Button, Box} from "@chakra-ui/react";
 import * as React from "react";
-import {useState} from "react";
-import Display from "./Display";
+import {useEffect, useState} from "react";
+import Countdown from "./Countdown";
 
 const SECOND_IN_MILLISECONDS = 1000;
+const MINUTE_IN_MILLISECONDS = SECOND_IN_MILLISECONDS * 60;
+
 
 function Timer()
 {
-    const [isActive, setIsActive] = useState(false);
     //setInterval(() => setCurrentDate(new Date()), SECOND_IN_MILLISECONDS);
-    const minutes = 15;
+    const MINUTES = 15;
+    const [isActive, setIsActive] = useState(false);
+    const [startDate, setStartDate] = useState(new Date());
+    const [endDate, setEndDate] = useState(new Date(Date.now() + MINUTES * MINUTE_IN_MILLISECONDS));
+    let intervalId: number;
+
+    function toggleTimer(): void
+    {
+        if (!isActive) intervalId = window.setInterval(() => setStartDate(new Date()), 500);
+        else window.clearInterval(intervalId);
+        setStartDate(new Date());
+        setEndDate(new Date(Date.now() + MINUTES * MINUTE_IN_MILLISECONDS));
+        setIsActive(!isActive);
+    }
 
     return (
         <Box>
-            <Display minutes={25} seconds={0} />
-            <Button onClick={() => setIsActive(!isActive)}>
+            <Countdown isActive={isActive} intervalInMinutes={MINUTES}/>
+            <Button onClick={toggleTimer}>
                 {isActive ? "Stop" : "Start"}
             </Button>
         </Box>
